@@ -1,0 +1,17 @@
+# vim
+set autoindent
+
+set hlsearch
+set incsearch
+
+set number
+
+set tabstop=4
+set expandtab
+
+set clipboard=unnamed
+
+# vrapper
+set contentassistmode
+set startnormalmode
+set imdisable
