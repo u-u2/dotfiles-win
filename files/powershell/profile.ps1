@@ -1,6 +1,6 @@
 
 # alias
-Set-Alias vi 'C:\Program Files (x86)\Vim\vim90\vim.exe'
+Set-Alias vi 'C:\Program Files\Vim\vim90\vim.exe'
 
 function Prompt {
     if ($?) {

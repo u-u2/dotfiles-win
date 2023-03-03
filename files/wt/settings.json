@@ -1,28 +1,31 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
+    "actions": 
+    [
         {
             "command": "openTabRenamer",
             "keys": "ctrl+shift+r"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": "paste",
             "keys": "ctrl+v"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+c"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "prevTab"
             },
             "keys": "ctrl+pgup"
@@ -40,16 +43,22 @@
             "keys": "alt+f4"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "nextTab"
             },
             "keys": "ctrl+pgdn"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "closeTab"
             },
-            "keys": "ctrl+w"
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": "closePane",
+            "keys": "ctrl+alt+w"
         }
     ],
     "copyFormatting": "none",
@@ -57,16 +66,20 @@
     "defaultProfile": "{a863c320-524f-4d64-bc2f-914ace0d4db1}",
     "language": "en-US",
     "launchMode": "default",
-    "profiles": {
-        "defaults": {
-            "font": {
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "font": 
+            {
                 "face": "HackGen Console",
                 "size": 12.0
             },
             "opacity": 50,
             "useAcrylic": false
         },
-        "list": [
+        "list": 
+        [
             {
                 "colorScheme": "Campbell",
                 "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
@@ -100,9 +113,15 @@
                 "name": "Ubuntu",
                 "startingDirectory": "~"
             },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
