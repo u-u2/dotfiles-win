@@ -1,6 +1,10 @@
 $caller = pwd
 cd "$PSScriptRoot\files"
 
+# install scoop
+irm get.scoop.sh | iex
+scoop install zenhan
+
 # dbcli pgcli
 cp -Force `
     -Path .\dbcli\pgcli\config `
