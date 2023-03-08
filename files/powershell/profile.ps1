@@ -21,7 +21,7 @@ function GenerateMavenProject {
         [parameter(ValueFromPipeline)]$Scope
     )
     process {
-        iex "mvn archetype:generate -DarchetypeCatalog=${scope}"
+        Invoke-Expression "mvn archetype:generate -DarchetypeCatalog=${scope}"
     }
 }
 
@@ -36,4 +36,12 @@ function CreateTempDirectory {
     process {
         $name = $Name -ne (null) ? "${Name}_tmp":"tmp"
     }
+}
+
+function DockerRemoveExitedProcess {
+    Invoke-Expression 'docker ps -qf status=exited | % {docker rm $_}'
+}
+
+function DockerListImageTemplate {
+    Invoke-Expression "docker images --format '{{.Repository}}:{{.Tag}}'"
 }
