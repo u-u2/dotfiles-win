@@ -3,12 +3,6 @@
 Set-Alias vi 'C:\Program Files\Vim\vim90\vim.exe'
 
 function Prompt {
-    if ($?) {
-        Write-Host "( 'ω')" -NoNewLine -ForegroundColor "Green"
-    }
-    else {
-        Write-Host "( ;ω;)" -NoNewLine -ForegroundColor "Red"
-    }
     Write-Host "${env:USERNAME}@${env:COMPUTERNAME} " -NoNewLine -ForegroundColor "Cyan"
     Write-Host $pwd -NoNewLine -ForegroundColor "DarkCyan"
     return ">"
@@ -25,17 +19,15 @@ function GenerateMavenProject {
     }
 }
 
-function CreateTempDirectory {
-    [CmdletBinding()]
+function OpenEclipseWorkspace{
     param(
-        [parameter(ValueFromPipeline)]
-        [string]$Name,
-        [Parameter(ValueFromPipeline)]
-        [boolean]$ExitOnDelete
+        [parameter(ValueFromPipeline)]$Path
     )
-    process {
-        $name = $Name -ne (null) ? "${Name}_tmp":"tmp"
+    if(-not(Test-Path "$Path\.metadata")){
+        Write-Host "workspace not found"
+        return
     }
+    Invoke-Expression "eclipse -data ${Path}"
 }
 
 function DockerRemoveExitedProcess {
