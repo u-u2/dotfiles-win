@@ -1,4 +1,0 @@
-vrapper
-  <C-a>
-  <C-w>
-  load vimrc
