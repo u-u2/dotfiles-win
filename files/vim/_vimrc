@@ -34,6 +34,8 @@ nnoremap <silent> <Space>t :tags<CR>
 nnoremap <silent> <Space>w :w<CR>
 nnoremap <silent> <Space>q :q<CR>
 nnoremap x "_x
+nnoremap X "_X
 nnoremap s "_s
+nnoremap S "_S
 
 nmap <C-h> <Space><Space>:%s/<C-r>///g<Left><Left>

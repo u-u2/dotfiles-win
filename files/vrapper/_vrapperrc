@@ -27,3 +27,7 @@ nmap <Space>r :reg<Enter>
 nmap <Space>m :marks<Enter>
 nmap <Space>b :buffers<Enter>
 nmap <Space>e :files<Enter>
+nnoremap x "_x
+nnoremap X "_X
+nnoremap s "_s
+nnoremap S "_S
